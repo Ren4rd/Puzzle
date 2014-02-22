@@ -45,6 +45,26 @@ public class Piece {
 		indiceRota=(indiceRota+1) % 4 ;
 	}
 	
+	public boolean parfait(){
+		boolean[] verif={false,false,false,false};
+		int nbPositifs=0;
+		int nbNegatifs=0;
+		
+		for(int i=0; i< valTab.length; i++){
+			if (Math.abs(valTab[i])==1 || Math.abs(valTab[i])==2 || Math.abs(valTab[i])==3 || Math.abs(valTab[i])==4){
+				verif[Math.abs(valTab[i])-1]=true;
+				}
+			if (valTab[i]<0) {
+				nbNegatifs ++;
+			}else{
+				nbPositifs ++;
+				}
+			}
+		
+		return verif[0] && verif[1] && verif[2] && verif[3] && nbNegatifs == 2 && nbPositifs ==2;
+				
+	}
+	
 	public void affichage(){
 		System.out.println("+--------------+");
 		System.out.println("|    "+this.valTab[0]+"    |");
