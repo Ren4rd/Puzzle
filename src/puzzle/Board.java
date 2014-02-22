@@ -29,24 +29,37 @@ public class Board {
 		for (int i=0;i<plateauTab.length; i++ ){
 	      System.out.print("+--------------");
 		}
-		System.out.println("+");
+		System.out.print("+");
+		
 		
 		for (int i=0;i<plateauTab.length; i++ ){
-			for (int j=0;j<plateauTab.length; j++){
-			System.out.print("|    "+plateauTab[i][j].valTab[0]+"    ");
+			
+		    for (int j=0;j<plateauTab.length; j++){
+			System.out.print("|    "+plateauTab[i][j].getValTab()[0]+"    ");
 			}
 			System.out.print("|");
 			
 			for (int j=0;j<plateauTab.length; j++){
-			System.out.println("|  "+this.plateauTab[i][j].valTab[3]+" ["+this.etiquette+this.indiceRota+"] "+this.plateauTab[i][j].valTab[1]+"  ");
+			System.out.println("|  "+this.plateauTab[i][j].getValTab()[3]+" ["+this.plateauTab[i][j].getEtiquette()+this.plateauTab[i][j].getIndiceRota()+"] "+this.plateauTab[i][j].getValTab()[1]+"  ");
 		    }
+			System.out.print("|");
+			
+			for (int j=0;j<plateauTab.length; j++){
+				System.out.print("|    "+plateauTab[i][j].getValTab()[2]+"    ");
+			}
+			System.out.print("|");
+			
+		}	
+		
+			
 		for (int i=0;i<plateauTab.length; i++ ){
-		  System.out.println("+--------------");
+		  System.out.print("+--------------");
 		}
-		System.out.println("+");
-	}
+		System.out.print("+");
+	}}
+	
 
 
 	
 
-}
+
