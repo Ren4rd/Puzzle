@@ -5,7 +5,7 @@ public class Piece {
 	private String etiquette;
 	private int indiceRota;
 	
-	public Piece(int[]valTab,String etiquette){
+	public Piece(int[] valTab,String etiquette){
 		this.valTab=valTab;
 		this.etiquette=etiquette;
 		this.indiceRota=0;
