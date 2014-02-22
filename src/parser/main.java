@@ -2,6 +2,8 @@ package parser;
 
 import java.io.FileNotFoundException;
 
+import puzzle.NineSquarePuzzle;
+
 public class main {
 
 	public static void main(String[] args) {
@@ -13,5 +15,6 @@ public class main {
 		e.printStackTrace();
 	}
 	}
-
+	
+	NineSquarePuzzle nSP = new NineSquarePuzzle("data2.txt");
 }
