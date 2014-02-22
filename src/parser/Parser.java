@@ -9,16 +9,13 @@ import java.util.Scanner;
 
 import puzzle.Piece;
 
-public class Parser {
-	private String filePath = "data1.txt";
-	
-	
+public class Parser {	
 	
 	public Parser() {
 	}
 	
-	public void reader() throws FileNotFoundException{
-	Scanner scanner=new Scanner(new File(filePath));
+	public Piece[] reader(String nomDuFichier) throws FileNotFoundException{
+	Scanner scanner=new Scanner(new File(nomDuFichier));
 	// on créée une liste de piece à partir du fichier texte
 	List<Piece> listePiece = new ArrayList <Piece>() ;
 	
@@ -41,14 +38,18 @@ public class Parser {
 	    	Piece p = new Piece(toto,tabL[0]);
 	    	System.out.println("");
 	    	p.affichage();
+	    	listePiece.add(p);
 	    }
+	    
+
 	 }
-	
+	Piece[] tabPiece = listePiece.toArray(new Piece[1]);
 		//faites ici votre traitement
 	
 	
 	 
 	scanner.close();
+	return tabPiece;
 	}
 
 
