@@ -11,7 +11,7 @@ public class main {
 	 try {
 		scan.reader("data1.txt");
 	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 	}
